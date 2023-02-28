@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Health Questionnaire</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('https://www.instacart.com/company/wp-content/uploads/2022/02/stored-vegetables-1.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /* styles from style.css */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 50px 0;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #ff9933;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e68a00;
+    }
+
+    /* styles for this form */
+    #questionnaire-form {
+      margin-top: 50px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    #questionnaire-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #questionnaire-form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <script>
+    // JS code for form validation and redirection
+    function validateForm() {
+      const name = document.forms["questionnaire-form"]["name"].value;
+      const email = document.forms["questionnaire-form"]["email"].value;
+      const age = document.forms["questionnaire-form"]["age"].value;
+      const question = document.forms["questionnaire-form"]["question"].value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+
+      if (name == "" || email == "" || age == "" || question == "" || gender == null) {
+        alert("Please fill out all fields");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  </style>
+
+  <script>
+    // JS code for form validation and redirection
+    function validateForm() {
+      const name = document.forms["questionnaire-form"]["name"].value;
+      const email = document.forms["questionnaire-form"]["email"].value;
+      const age = document.forms["questionnaire-form"]["age"].value;
+      const question = document.forms["questionnaire-form"]["question"].value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+
+      if (name == "" || email == "" || age == "" || question == "" || gender == null) {
+        alert("Please fill out all fields");
+        return false;
+      }
+
+      return true;
+    }
+
+  <script>
+    // JS code for form validation and redirection
+    function validateForm() {
+      const name = document.forms["questionnaire-form"]["name"].value;
+      const email = document.forms["questionnaire-form"]["email"].value;
+      const age = document.forms["questionnaire-form"]["age"].value;
+      const question = document.forms["questionnaire-form"]["question"].value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+
+      if (name == "" || email == "" || age == "" || question == "" || gender == null) {
+        alert("Please fill out all fields");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1>Health Questionnaire</h1>
+
+  <form id="questionnaire-form" onsubmit="return validateForm()" action="index.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+
+    <label for="question">Do you want to get healthy?</label>
+    <select id="question" name="question">
+      <option value="">-- Please select an option --</option>
+      <option value="yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="gender">Gender:</label>
+    <br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="Female">Female</label>
+
+    <input type="radio" id="Male" name="gender" value="Male">
+    <label for="Male">Male</label>
+    <br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</body>
+</html>
+
